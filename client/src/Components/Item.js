@@ -7,7 +7,6 @@ function Item({ item }) {
       {" "}
       <div className="item">
         <h1>{item.thumbnail}</h1>
-        <div>{item.price}</div>
       </div>
     </Link>
   );

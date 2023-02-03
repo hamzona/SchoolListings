@@ -18,7 +18,20 @@ route.get("/infos", async (req, res) => {
     const data = await formSchema.find({});
     res.send(data);
   } catch (e) {
-    console.log(e);
+    res.send(e);
+  }
+});
+route.get("/item/:id", async (req, res) => {
+  try {
+    const item = await formSchema.findById(req.params.id);
+
+    console.log(item);
+    if (item === null) {
+      res.send("not found");
+    }
+    res.json(item);
+  } catch (e) {
+    res.send(e);
   }
 });
 route.post("/infos", async (req, res) => {

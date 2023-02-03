@@ -15,7 +15,7 @@ function InputComp() {
 
   function hendleChange(e) {
     let copyForm = form;
-    console.log(form);
+
     copyForm[e.target.id] = e.target.value;
     setForm(copyForm);
   }
@@ -33,6 +33,7 @@ function InputComp() {
             type="text"
             id="thumbnail"
             name="thumbnail"
+            required
           />
         </div>
         <div>
@@ -44,6 +45,7 @@ function InputComp() {
             }}
             id="service"
             name="service"
+            required
           >
             <option value="instructions">INSTRUCTIONS</option>
             <option value="homework">HOMEWORK</option>
